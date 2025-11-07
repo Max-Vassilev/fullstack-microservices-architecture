@@ -34,3 +34,14 @@ uvicorn order_service.main:app --port 8002 --reload
 source venv/bin/activate
 uvicorn payment_service.main:app --port 8003 --reload
 ```
+
+***Create a PostgreSQL DB using Docker container***
+```bash
+docker run -d \
+  --name grpc_postgres \
+  -e POSTGRES_USER=user_1 \
+  -e POSTGRES_PASSWORD=password \
+  -e POSTGRES_DB=grpc_database \
+  -p 5432:5432 \
+  postgres:15
+```
