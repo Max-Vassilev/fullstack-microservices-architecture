@@ -27,10 +27,16 @@ docker run --name users-postgres -p 5432:5432 -e POSTGRES_USER=user_1 -e POSTGRE
 ```bash
 docker exec -ti users-postgres createdb -U postgres users_db
 ```
-
+***Activate the virtal environment from the root project folder***
 ```bash
 source venv/bin/activate
+```
+***Enter the users directory***
+```bash
 cd user_service/
+```
+***Run the users service***
+```bash
 uvicorn main:app --port 8001 --reload
 ```
 
@@ -45,9 +51,16 @@ docker run --name orders-postgres -p 5433:5432 -e POSTGRES_USER=user_1 -e POSTGR
 docker exec -ti orders-postgres createdb -U postgres orders_db
 ```
 
+***Activate the virtal environment from the root project folder***
 ```bash
 source venv/bin/activate
+```
+***Enter the orders directory***
+```bash
 cd order_service/
+```
+***Run the orders service***
+```bash
 uvicorn main:app --port 8002 --reload
 ```
 
@@ -62,8 +75,15 @@ docker run --name payments-postgres -p 5434:5432 -e POSTGRES_USER=user_1 -e POST
 docker exec -ti payments-postgres createdb -U postgres payments_db
 ```
 
+***Activate the virtal environment from the root project folder***
 ```bash
 source venv/bin/activate
+```
+***Enter the payments directory***
+```bash
 cd payment_service/
+```
+***Run the payments service***
+```bash
 uvicorn main:app --port 8003 --reload
 ```
