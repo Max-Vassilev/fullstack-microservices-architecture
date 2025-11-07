@@ -23,6 +23,15 @@ source venv/bin/activate
 uvicorn user_service.main:app --port 8001 --reload
 ```
 
+***Run a PostgreSQL Docker container***
+```bash
+docker run --name users-postgres -p 5433:5432 -e POSTGRES_PASSWORD=password -d postgres
+```
+***Create a database in PostgreSQL***
+```bash
+docker exec -ti users-postgres createdb -U postgres users_db
+```
+
 **Terminal 2:**
 ```bash
 source venv/bin/activate
@@ -35,11 +44,9 @@ source venv/bin/activate
 uvicorn payment_service.main:app --port 8003 --reload
 ```
 
-***Run a PostgreSQL Docker container***
-```bash
-docker run --name postgres -p 5432:5432 -e POSTGRES_PASSWORD=password -d postgres
-```
-***Create a database in PostgreSQL***
-```bash
-docker exec -ti postgres createdb -U postgres database_1
-```
+
+
+
+
+
+
