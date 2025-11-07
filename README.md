@@ -35,7 +35,11 @@ source venv/bin/activate
 uvicorn payment_service.main:app --port 8003 --reload
 ```
 
-***Create a PostgreSQL DB using Docker container***
+***Run a PostgreSQL Docker container***
 ```bash
 docker run --name postgres -p 5432:5432 -e POSTGRES_PASSWORD=password -d postgres
+```
+***Create a database in PostgreSQL***
+```bash
+docker exec -ti postgres createdb -U postgres database_1
 ```
