@@ -5,7 +5,7 @@ class UserCreate(BaseModel):
     email: str
 
 class UserRead(BaseModel):
-    id: str
+    id: int
     name: str
     email: str
 

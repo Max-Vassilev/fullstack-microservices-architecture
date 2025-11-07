@@ -2,3 +2,7 @@ fastapi
 uvicorn
 requests
 pydantic
+alembic
+asyncpg
+greenlet
+psycopg2-binary

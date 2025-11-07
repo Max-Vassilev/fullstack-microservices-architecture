@@ -1,0 +1,9 @@
+services:
+  postgresql_service:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: user_1
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: grpc_database
+    ports:
+      - "5432:5432"
