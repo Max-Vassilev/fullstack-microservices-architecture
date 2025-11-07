@@ -27,6 +27,7 @@ docker exec -ti users-postgres createdb -U postgres users_db
 
 ```bash
 source venv/bin/activate
+cd user_service/
 uvicorn user_service.main:app --port 8001 --reload
 ```
 
@@ -35,6 +36,7 @@ uvicorn user_service.main:app --port 8001 --reload
 ***Run a PostgreSQL Docker container and Create a database in PostgreSQL***
 ```bash
 docker run --name orders-postgres -p 5433:5432 -e POSTGRES_PASSWORD=password -d postgres
+cd order_service/
 docker exec -ti orders-postgres createdb -U postgres orders_db
 ```
 
@@ -53,5 +55,6 @@ docker exec -ti payments-postgres createdb -U postgres payments_db
 
 ```bash
 source venv/bin/activate
+cd payment_service/
 uvicorn payment_service.main:app --port 8003 --reload
 ```
