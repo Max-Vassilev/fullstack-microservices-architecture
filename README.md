@@ -28,7 +28,7 @@ docker exec -ti users-postgres createdb -U postgres users_db
 ```bash
 source venv/bin/activate
 cd user_service/
-uvicorn user_service.main:app --port 8001 --reload
+uvicorn main:app --port 8001 --reload
 ```
 
 **Terminal 2:**
@@ -42,7 +42,7 @@ docker exec -ti orders-postgres createdb -U postgres orders_db
 ```bash
 source venv/bin/activate
 cd order_service/
-uvicorn order_service.main:app --port 8002 --reload
+uvicorn main:app --port 8002 --reload
 ```
 
 **Terminal 3:**
@@ -56,5 +56,5 @@ docker exec -ti payments-postgres createdb -U postgres payments_db
 ```bash
 source venv/bin/activate
 cd payment_service/
-uvicorn payment_service.main:app --port 8003 --reload
+uvicorn main:app --port 8003 --reload
 ```
