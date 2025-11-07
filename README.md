@@ -37,5 +37,5 @@ uvicorn payment_service.main:app --port 8003 --reload
 
 ***Create a PostgreSQL DB using Docker container***
 ```bash
-docker run --name postgres-db -p 5432:5432 -e POSTGRESS_PASSWORD=password -d postgres
+docker run --name postgres-db -p 5432:5432 -e POSTGRES_PASSWORD=password -d postgres
 ```
