@@ -21,7 +21,7 @@ pip install -r requirements.txt
 
 ***Run a PostgreSQL Docker container and Create a database in PostgreSQL***
 ```bash
-docker run --name users-postgres -p 5433:5432 -e POSTGRES_PASSWORD=password -d postgres
+docker run --name users-postgres -p 5432:5432 -e POSTGRES_PASSWORD=password -d postgres
 docker exec -ti users-postgres createdb -U postgres users_db
 ```
 
@@ -34,7 +34,7 @@ uvicorn user_service.main:app --port 8001 --reload
 
 ***Run a PostgreSQL Docker container and Create a database in PostgreSQL***
 ```bash
-docker run --name orders-postgres -p 5434:5432 -e POSTGRES_PASSWORD=password -d postgres
+docker run --name orders-postgres -p 5433:5432 -e POSTGRES_PASSWORD=password -d postgres
 docker exec -ti orders-postgres createdb -U postgres orders_db
 ```
 
@@ -47,7 +47,7 @@ uvicorn order_service.main:app --port 8002 --reload
 
 ***Run a PostgreSQL Docker container and Create a database in PostgreSQL***
 ```bash
-docker run --name payments-postgres -p 5435:5432 -e POSTGRES_PASSWORD=password -d postgres
+docker run --name payments-postgres -p 5434:5432 -e POSTGRES_PASSWORD=password -d postgres
 docker exec -ti payments-postgres createdb -U postgres payments_db
 ```
 
