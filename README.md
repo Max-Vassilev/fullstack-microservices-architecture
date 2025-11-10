@@ -48,7 +48,7 @@ docker run --name orders-postgres -p 5433:5432 -e POSTGRES_USER=user_1 -e POSTGR
 ```
 ***Create a database in PostgreSQL***
 ```bash
-docker exec -ti orders-postgres createdb -U postgres orders_db
+docker exec -ti orders-postgres createdb -U user_1 orders_db
 ```
 
 ***Activate the virtal environment from the root project folder***
@@ -72,7 +72,7 @@ docker run --name payments-postgres -p 5434:5432 -e POSTGRES_USER=user_1 -e POST
 ```
 ***Create a database in PostgreSQL***
 ```bash
-docker exec -ti payments-postgres createdb -U postgres payments_db
+docker exec -ti payments-postgres createdb -U user_1 payments_db
 ```
 
 ***Activate the virtal environment from the root project folder***
