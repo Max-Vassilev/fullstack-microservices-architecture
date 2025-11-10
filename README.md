@@ -25,7 +25,7 @@ docker run --name users-postgres -p 5432:5432 -e POSTGRES_USER=user_1 -e POSTGRE
 ```
 ***Create a database in PostgreSQL***
 ```bash
-docker exec -ti users-postgres createdb -U postgres users_db
+docker exec -ti users-postgres createdb -U user_1 users_db
 ```
 ***Activate the virtal environment from the root project folder***
 ```bash
